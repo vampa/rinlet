@@ -1,0 +1,226 @@
+/* LAYOUT RESET STYLES */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, a, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	float: left;
+}
+
+/* Border-Box Padding */
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* COLORS KEY
+	blue-grey-bg: #596f80 (89, 111, 128)
+	blue-grey-light: #8db0cd
+	dark-blue: #215982
+	light-blue: #41b3ff
+	ligher-blue: #b0dcff
+*/
+
+/* LAYOUT */
+
+html { 
+  background: url(img/fountain.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body{
+	background-color:rgba(25, 39, 49, 0.6);
+	min-width: 1000px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* COMMON CLASSES */
+
+.right{
+	float: right;
+}
+
+/* TYPOGRAPHY */
+
+*{
+	list-style: none outside none;
+	font-family: "source-sans-pro", sans-serif;
+	color: white;
+}
+
+h1, h2, h3 {
+	font-weight: 400;
+}
+
+p, li, a, span{
+	font-size: 1em;
+	font-weight: 200;
+	text-decoration: none;
+}
+
+a{
+	transition: all 0.2s ease-out;
+}
+
+/* Header */
+
+#header-wrap{
+	width: 100%;
+	max-width: 1500px;
+	margin: 0 auto;
+	float: none;
+	padding: 0 0 0 2.5%;
+}
+
+#header-wrap #logo-wrap{
+	padding: 30px 10px 10px 10px;
+	background: #596f80;
+}
+
+#header-wrap #logo-wrap a#logo img{
+	width: 50px;
+}
+
+#navigation{
+	padding-left: 2.5%;
+	width: calc(100% - 70px);
+	max-width: 1430px;
+	float: right;
+}
+
+#navigation li{
+	margin-right: 2.5%;
+}
+
+#navigation li.right{
+	margin-left: 2.5%;
+}
+
+#navigation li.right a{
+	text-align: right;
+}
+
+#navigation li a{
+	margin: 5px 2.5% 0 0;
+	border-top: 3px solid #b0dcff;
+	width: 125px;
+	padding-top: 8px;
+	color: #b0dcff;
+	font-size: .85em;
+}
+
+#navigation li:hover a{
+	color: white;
+	border-color: white;
+	margin-top: 15px;
+	-webkit-transition: length 2s; /* For Safari 3.1 to 6.0 */
+  transition: length 2s;
+}
+
+#navigation li.active a{
+	color: #41b3ff;
+	border-color: #41b3ff;
+	margin-top: 5px;
+	cursor: default;
+}
+
+/* Board */
+
+#toggle-board{
+	margin-top: 35px;
+	margin-left: 2.5%;
+}
+
+#toggle-board span.icon-note{
+	font-size: .8em;
+	padding-top: 3px;
+	color: #b0dcff;
+}
+
+#toggle-board span.icon-note span.fa{
+	width: 25px;
+	font-size: 1.7em;
+	margin-top: -3px;
+	color: #b0dcff;
+}
+
+#board-wrap{ 
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	padding: 2.5% 100% 2.5% 0;
+	width: 101%;
+	height: calc(100% - 90px - 250px); /* header: 90px; footer: 250px;
+	/*max-height: calc(70% - 90px);*/
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#board{
+	width: 100%;
+	max-width: 1510px;
+	margin: 0 auto;
+	float: none;
+	min-height: 99%;
+	padding-left: 2.5%;
+}
+
+#board .tile-wrap{
+	min-width: 250px; min-height: 300px;
+	width: 25%; height: 25%;
+	padding-right: 2.5%;
+	padding-bottom: 2.5%;
+	background: none;
+	border: none;
+}
+
+#board .tile-wrap.medium{
+	min-width: 500px;
+	width: 50%;
+}
+
+#board .tile-wrap.large{
+	min-width: 750px;
+	width: 75%;
+}
+
+#board .tile-wrap.full{
+	min-width: 1000px;
+	width: 100%;
+}
+
+#board .tile-wrap .tile{
+	width: 100%; height: 100%;
+	background-color:rgba(32, 49, 63, 0.85);
+}
+
+/* Footer */
+
+#footer-wrap{
+	width: 100%;
+	height: 250px;
+	padding: 1% 0 0 0;
+	position: absolute;
+	bottom: 0;
+}
+
+#footer{
+	width: 100%;
+	height: 100%;
+	padding: 1%;
+	background: #20313f;
+}
+
+
