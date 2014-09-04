@@ -6,9 +6,8 @@
 
 		<link rel="icon" type="image/png" href="./img/favicon.png">
 
-		<!-- ADOBE TYPEKIT FONTS IMPORT -->
-		<script type="text/javascript" src="//use.typekit.net/tos2qxy.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<!-- GOOGLE FONTS IMPORT -->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
 
 		<link rel="stylesheet" href="_font-awesome.css" />
 
@@ -42,18 +41,20 @@
 				<li><a href="index.html">Edit Tabs</a></li>
 				<li class="right"><a href="index.html">Settings</a></li>
 			</ul>
+			<span id="below-navigation">
+				<h2 id="title">Welcome back, Alex!</h2>
+				<a href="#" id="toggle-board" class="right">
+					<span class="icon-note unlock">
+						<span>UNLOCK GRID</span>
+						<span class="fa fa-lock"></span>
+					</span>
+					<span class="icon-note lock" style="display: none;">
+						<span>SAVE & LOCK GRID</span>
+						<span class="fa fa-unlock-alt"></span>
+					</span>
+				</a>
+			</span>
 		</div>
-
-		<a href="#" id="toggle-board">
-			<span class="icon-note unlock">
-				<span class="fa fa-lock"></span>
-				UNLOCK GRID
-			</span>
-			<span class="icon-note lock" style="display: none;">
-				<span class="fa fa-unlock-alt"></span>
-				SAVE & LOCK GRID
-			</span>
-		</a>
 
 		<div id="board-wrap">
 			<ul id="board">

@@ -56,7 +56,7 @@ body{
 
 *{
 	list-style: none outside none;
-	font-family: "source-sans-pro", sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	color: white;
 }
 
@@ -98,6 +98,7 @@ a{
 	width: calc(100% - 70px);
 	max-width: 1430px;
 	float: right;
+	height: 41px;
 }
 
 #navigation li{
@@ -124,7 +125,7 @@ a{
 #navigation li:hover a{
 	color: white;
 	border-color: white;
-	margin-top: 15px;
+	margin-top: 10px;
 	-webkit-transition: length 2s; /* For Safari 3.1 to 6.0 */
   transition: length 2s;
 }
@@ -136,16 +137,29 @@ a{
 	cursor: default;
 }
 
-/* Board */
+#below-navigation{
+	padding-left: 2.5%;
+	width: calc(100% - 70px);
+	max-width: 1430px;
+	float: left;
+}
+
+#title{
+	font-weight: 100;
+	margin-top: 18px;
+}
 
 #toggle-board{
-	margin-top: 35px;
-	margin-left: 2.5%;
+	margin-top: 25px;
+	margin-right: 2.5%;
 }
 
 #toggle-board span.icon-note{
 	font-size: .8em;
 	padding-top: 3px;
+}
+
+#toggle-board span.icon-note span{
 	color: #b0dcff;
 }
 
@@ -153,8 +167,10 @@ a{
 	width: 25px;
 	font-size: 1.7em;
 	margin-top: -3px;
-	color: #b0dcff;
+	text-align: right;
 }
+
+/* Board */
 
 #board-wrap{ 
 	-webkit-box-sizing: content-box;
@@ -162,7 +178,7 @@ a{
 	box-sizing: content-box;
 	padding: 2.5% 100% 2.5% 0;
 	width: 101%;
-	height: calc(100% - 90px - 250px); /* header: 90px; footer: 250px;
+	height: calc(100% - 90px - 300px); /* header: 90px; footer: 250px; */
 	/*max-height: calc(70% - 90px);*/
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -210,7 +226,7 @@ a{
 
 #footer-wrap{
 	width: 100%;
-	height: 250px;
+	height: 300px;
 	padding: 1% 0 0 0;
 	position: absolute;
 	bottom: 0;
