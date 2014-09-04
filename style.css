@@ -39,7 +39,7 @@ html {
   background-size: cover;
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body{
@@ -47,7 +47,7 @@ body{
 	min-width: 1000px;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* COMMON CLASSES */
@@ -186,7 +186,7 @@ a{
 	box-sizing: content-box;
 	padding: 2.5% 100% 2.5% 0;
 	width: 101%;
-	height: calc(100% - 90px - 300px); /* header: 90px; footer: 250px; */
+	height: calc(100% - 90px - 100px); /* header: 90px; footer: 250px; */
 	/*max-height: calc(70% - 90px);*/
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -234,8 +234,7 @@ a{
 
 #footer-wrap{
 	width: 100%;
-	height: 300px;
-	padding: 1% 0 0 0;
+	height: 100px;
 	position: absolute;
 	bottom: 0;
 }
@@ -245,6 +244,25 @@ a{
 	height: 100%;
 	padding: 1%;
 	background: #20313f;
+}
+
+#footer #logo{
+	width: 300px;
+}
+
+#footer #logo h2{
+	color: #b0dcff;
+	margin: 5px 0 0 20px;
+}
+
+#footer #logo p{
+	color: #b0dcff;
+	margin: 0 0 0 20px;
+	font-size: .75em;
+}
+
+#footer #logo img{
+	height: 65px;
 }
 
 
