@@ -1,8 +1,14 @@
 (function($){
 
+    window.Rinlet = {
+      Models: {},
+      Collections: {},
+      Views: {},
+      Router: {}
+    };
 
     // MODELS (OBJECTS)
-    var Tile = Backbone.Model.extend({
+    Rinlet.Tile = Backbone.Model.extend({
         defaults: {
             size: "small", // small, medium, large, full
             title: "date",
@@ -14,19 +20,25 @@
     });
 
     // COLLECTIONS (GROUPED MODELS)
-    var Board = Backbone.Collection.extend({
-        model: Tile
+    Rinlet.Board = Backbone.Collection.extend({
+        model: Rinlet.Tile
     });
 
     // var homeBoard = new Board([new Tile(),new Tile(),new Tile()]);
 
     // VIEW (VIEW CONTROLLER)
-    var Tab = Backbone.View.extend({
+    Rinlet.BoardTab = Backbone.View.extend({
         template: _.template( $("#board-template").html()),
         el: $('#content'),
         initialize: function(){
             _.bindAll(this, 'render')
-            this.collection = new Board([new Tile(),new Tile(),new Tile()]);
+            
+            // this.collection = new Rinlet.Board([
+            //     new Rinlet.Tile(),
+            //     new Rinlet.Tile(),
+            //     new Rinlet.Tile({size: "medium"})
+            //     ]);
+
             this.render();
         },
         render: function(){
@@ -34,6 +46,64 @@
         }
     });
     
-    var tab = new Tab();
+    Rinlet.Router = Backbone.Router.extend({
+        routes: {
+            "" : "home",
+            "tv" : "tv",
+            "sports" : "sports",
+            "news" : "news",
+            "social" : "social"
+        },
+        home: function(){
+            new Rinlet.BoardTab({ 
+                collection:  new Rinlet.Board([
+                    new Rinlet.Tile(),
+                    new Rinlet.Tile(),
+                    new Rinlet.Tile({size: "medium"})
+                ])
+            });
+        },
+        tv: function(){
+            new Rinlet.BoardTab({ 
+                collection:  new Rinlet.Board([
+                    new Rinlet.Tile({size: "medium"}),
+                    new Rinlet.Tile({size: "medium"})
+                ])
+            });            
+        },
+        sports: function(){
+            new Rinlet.BoardTab({ 
+                collection:  new Rinlet.Board([
+                    new Rinlet.Tile({size: "medium"}),
+                    new Rinlet.Tile(),
+                    new Rinlet.Tile()
+                ])
+            });            
+        },
+        news: function(){
+            new Rinlet.BoardTab({ 
+                collection:  new Rinlet.Board([
+                    new Rinlet.Tile(),
+                    new Rinlet.Tile({size: "medium"}),
+                    new Rinlet.Tile()
+                ])
+            });            
+        },
+        social: function(){
+            new Rinlet.BoardTab({ 
+                collection:  new Rinlet.Board([
+                    new Rinlet.Tile(),
+                    new Rinlet.Tile({size: "medium"}),
+                    new Rinlet.Tile(),
+                    new Rinlet.Tile({size: "medium"}),
+                    new Rinlet.Tile(),
+                    new Rinlet.Tile()
+                ])
+            });            
+        }
+    });
+
+    new Rinlet.Router;
+    Backbone.history.start();
 
 })(jQuery);
