@@ -40,7 +40,6 @@
     // VIEW (VIEW CONTROLLER)
     // GENERATES THE HEADER WHEN UPDATING ROUTES
     Rinlet.Header = Backbone.View.extend({
-        el: $('#header-wrap'),
         initialize: function(options){
             this.render({ pageTitle: options.pageTitle, active_tab: options.active_tab });
         },
